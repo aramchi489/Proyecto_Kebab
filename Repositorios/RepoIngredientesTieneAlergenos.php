@@ -2,7 +2,7 @@
 $base=$_SERVER['DOCUMENT_ROOT']."/PRIMERO/prueba_conexion";
 //require_once "$base/clases/Coche.php";
 
-Class RepoProvincia{
+Class RepoIngredientesTieneAlergenos{
 
     private $con;
 
@@ -13,11 +13,11 @@ Class RepoProvincia{
 
     
 
-    public function createProvincia(): void{
+    public function addIngTieneAlerge(): void{
 
     }
 
-    public function readProvincia(String $marca, String $modelo){
+    public function readIngTieneAlerge(String $marca, String $modelo){
         $stm=$this->con->prepare("select * from coche where marca=:marca and modelo=:modelo");
         $stm->execute([':marca'=>$marca,':modelo'=>$modelo]);
         $coche=null;
@@ -34,13 +34,13 @@ Class RepoProvincia{
         return $coche;
     }
 
-    public function deleteProvincia(String $marca,String $modelo):void{
+    public function deleteIngTieneAlerge(String $marca,String $modelo):void{
         $stm=$this->con->prepare("delete from coche where marca=:marca and modelo=:modelo");
         $stm->execute([':marca'=>$marca,':modelo'=>$modelo]);
         
     }
 
-    public function updateProvincia():void{
+    public function updateIngTieneAlerge():void{
 
     }
 }
