@@ -1,18 +1,18 @@
 <?php
 
-class Kebab{
-    public String $idKebab;
+class Alergeno{
+    public String $idAlergeno;
     public String $nombre;
     public String $foto;
 
-    public function __construct($idKebab,$nombre,$foto){
-        $this->idKebab=$idKebab;
+    public function __construct($idAlergeno,$nombre,$foto){
+        $this->idAlergeno=$idAlergeno;
         $this->nombre=$nombre;
         $this->foto=$foto;
     }
 
-    public function getIdKebab(){
-        return $this->idKebab;
+    public function getIdAlergeno(){
+        return $this->idAlergeno;
     }
 
     public function getNombre(){
@@ -32,6 +32,7 @@ class Kebab{
     }
 
     public function __toString(){
-        return "Id del Kebab: "+$idKebab+";Nombre: "+$nombre;
+        return "Id del Alérgeno: "+$idAlergeno+";Nombre: "+$nombre;
     }
+
 }
